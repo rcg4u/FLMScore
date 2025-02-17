@@ -38,6 +38,9 @@ if os.path.exists(COMM_FILE):
 
         for line in lines:
             staff, voice, startTick, pitch, duration = line.strip().split(',')
+            # Convert staff and voice to integers
+            staff = int(staff)  # Convert staff to integer
+            voice = int(voice)  # Convert voice to integer
             startTick = int(startTick)
             pitch = int(pitch)
             flp.Utils.log(f'\tNote {pitch=} {duration=} {startTick=}')
